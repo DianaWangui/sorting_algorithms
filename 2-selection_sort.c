@@ -4,7 +4,6 @@
  * usinf selection sort algorithm
  * @array: the array to be sorted
  * @size: the size of the array
- * Return: elements in sorted array
  */
 void selection_sort(int *array, size_t size)
 {
@@ -20,10 +19,13 @@ void selection_sort(int *array, size_t size)
 			if (array[j] < array[small])
 				small = j;
 		}
-		temp = array[i];
-		array[i] = array[small];
-		array[small] = temp;
-		print_array(array, size);
+		if (small != i)
+		{
+			temp = array[i];
+			array[i] = array[small];
+			array[small] = temp;
+			print_array(array, size);
+		}
 	}
 
 }
