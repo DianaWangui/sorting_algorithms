@@ -4,7 +4,7 @@
  * usinf selection sort algorithm
  * @array: the array to be sorted
  * @size: the size of the array
- * return: elements in sorted array
+ * Return: elements in sorted array
  */
 void selection_sort(int *array, size_t size)
 {
