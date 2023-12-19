@@ -8,11 +8,11 @@
 void shell_sort(int *array, size_t size)
 {
 	size_t i, j, interval;
-	size_t div = 2;
-	size_t small = 0;
+	size_t div = 3;
 	int temp;
 
-	for (interval = size / div; interval > small; interval /= div)
+	for (interval = 1 ; interval <= size / div; interval = interval * div + 1);
+	while (interval > 0)
 	{
 		for (i = interval; i < size; i++)
 		{
